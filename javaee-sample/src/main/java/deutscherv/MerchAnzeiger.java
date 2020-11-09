@@ -25,7 +25,7 @@ public class MerchAnzeiger extends HttpServlet {
 	Merch.add(new Merch(2,"LTD Tourbox",false));
 	Merch.add(new Merch(3,"Shirt 'No Solace'",true));
 
-	request.setAttribute("m", Merch);
+	request.setAttribute("me", Merch);
 	request.getRequestDispatcher("/displaymerch.jsp")
 	.forward(request, response);
 }

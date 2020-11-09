@@ -11,7 +11,7 @@
 <body>
 	<ul>
 		<%
-			Collection<Merch> merch = (Collection<Merch>) request.getAttribute("m");
+			Collection<Merch> merch = (Collection<Merch>) request.getAttribute("me");
 
 		for (Merch m : merch) {
 		%><li><%=m.getArtikelnr()%>,<%=m.getName()%>, Verfügbar? <%=m.isLieferbar()%></li>
