@@ -9,10 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/hello")
-public class HelloWorldServlet extends HttpServlet {
 
+@WebServlet("/start")
+public class StartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
+ 
+    public StartServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
@@ -20,6 +26,7 @@ public class HelloWorldServlet extends HttpServlet {
 			out.println("Hello " + (name != null ? name : "World") + "!");
 			
 		};
+	
 	}
 
 }

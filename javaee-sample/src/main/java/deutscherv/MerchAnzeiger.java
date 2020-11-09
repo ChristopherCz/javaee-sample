@@ -10,23 +10,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/fahrzeuge")
-public class FahrzeugdatenAnzeigeServlet extends HttpServlet {
+/**
+ * Servlet implementation class MerchAnzeiger
+ */
+@WebServlet("/showmerch")
+public class MerchAnzeiger extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		// Logik, z.B. DB-Zugriff o.Ä.
-		
-		Collection<Fahrzeug> fahrzeuge = new LinkedList<>();
-		fahrzeuge.add(new Fahrzeug("Ford", 2010));
-		fahrzeuge.add(new Fahrzeug("Opel", 2018));
-		
-		// Antwort generieren in JSP, kein PrintWriter!
-		request.setAttribute("fz", fahrzeuge);
-		request.getRequestDispatcher("/displayFahrzeuge.jsp")
-			.forward(request, response);
-		
-	}
+	
+	Collection<Merch> Merch = new LinkedList<>();
+	Merch.add(new Merch(1,"Banner 4x4",true));
+	Merch.add(new Merch(2,"LTD Tourbox",false));
+	Merch.add(new Merch(3,"Shirt 'No Solace'",true));
 
+	request.setAttribute("m", Merch);
+	request.getRequestDispatcher("/displaymerch.jsp")
+	.forward(request, response);
+}
 }
