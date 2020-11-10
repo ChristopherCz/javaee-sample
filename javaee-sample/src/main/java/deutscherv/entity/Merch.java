@@ -1,4 +1,4 @@
-package deutscherv;
+package deutscherv.entity;
 
 public class Merch {
 	
