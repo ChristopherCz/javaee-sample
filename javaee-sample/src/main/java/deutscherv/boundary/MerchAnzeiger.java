@@ -21,7 +21,8 @@ public class MerchAnzeiger extends HttpServlet {
 	
 	Collection<Merch> Merch = Merchbestand.getInstance().getMerch();
 	
-
+	
+	
 	request.setAttribute("me", Merch);
 	request.getRequestDispatcher("/displaymerch.jsp")
 	.forward(request, response);
