@@ -1,7 +1,10 @@
 package deutscherv.entity;
 
-public class Merch {
+import java.io.Serializable;
+
+public class Merch implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private int artikelnr;
 	private String name;
 	private boolean lieferbar;
