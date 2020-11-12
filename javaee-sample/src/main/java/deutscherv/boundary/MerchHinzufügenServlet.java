@@ -30,6 +30,11 @@ public class MerchHinzufügenServlet extends HttpServlet {
 		String anr = request.getParameter("artikelnr");
 		String name = request.getParameter("name");
 		String liefer= request.getParameter("lieferbar");
+		
+		if(null == anr||null==name||null==liefer||anr.isEmpty()||name.isEmpty()||liefer.isEmpty()) {
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+		}
+		
 		// Konvertierung / Validierung
 		int artikelnr = Integer.valueOf(anr);
 		boolean lieferbar = Boolean.valueOf(liefer);
