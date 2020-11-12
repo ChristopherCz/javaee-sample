@@ -46,7 +46,7 @@ public class MerchSucheServlet extends HttpServlet {
 
 			// Antwort generieren in JSP, kein PrintWriter!
 			request.setAttribute("me", suchErgebnisse);
-			request.getRequestDispatcher("/displaymerch.jsp").forward(request, response);
+			request.getRequestDispatcher("WEB-INF/jsp/displaymerch.jsp").forward(request, response);
 		}
 
 	}

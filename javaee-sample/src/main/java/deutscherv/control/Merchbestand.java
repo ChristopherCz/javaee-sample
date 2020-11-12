@@ -8,20 +8,13 @@ import javax.enterprise.context.ApplicationScoped;
 
 import deutscherv.entity.Merch;
 
-@ApplicationScoped
+@MerchHandling
 public class Merchbestand {
 	
 	private final Collection<Merch> merch = new LinkedList<>();
 
 	// nur 1 Bestand in der Anwendung -> Singleton
-	
-	@PostConstruct
-	public void init() {
-		merch.add(new Merch(1,"Banner 4x4",true));
-		merch.add(new Merch(2,"LTD Tourbox",false));
-		merch.add(new Merch(3,"Shirt 'No Solace'",true));
-		merch.add(new Merch(4,"Shirt 'Redemption'",true));
-	}
+
 
 	public Collection<Merch> getMerch() {
 		return merch;

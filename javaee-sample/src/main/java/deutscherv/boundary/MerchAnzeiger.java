@@ -28,7 +28,7 @@ public class MerchAnzeiger extends HttpServlet {
 	
 	
 	request.setAttribute("me", Merch);
-	request.getRequestDispatcher("/displaymerch.jsp")
+	request.getRequestDispatcher("WEB-INF/jsp/displaymerch.jsp")
 	.forward(request, response);
 }
 }

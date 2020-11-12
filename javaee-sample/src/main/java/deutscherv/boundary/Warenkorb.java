@@ -19,5 +19,11 @@ public class Warenkorb implements Serializable {
 	public Collection<Merch> getMerch() {
 		return merchandise;
 	}
-	
+	public boolean add(Merch e) {
+		return merchandise.add(e);
+	}
+
+	public boolean remove(Merch o) {
+		return merchandise.remove(o);
+	}
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>MerchNeu</title>
+	<style type="text/css">
+		label {
+			width: 5em;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Merch Erstellen</h1>
+	<form action="MerchNeu" method="post">
+		<p>
+			<label for="artikelnr">Artikelnr:</label>
+			<input id="artikelnr" name="artikelnr" type="number" />
+		</p>
+		<p>
+			<label for="name">Name:</label>
+			<input id="name" name="name" type="text" />
+		</p>
+		<p>
+			<label for="lbar">Lieferbar?(True / False):</label>
+			<input id="lbar" name="lbar" type="text" />
+		</p>
+		<input type="submit" />
+	</form>
+</body>
+</html>
